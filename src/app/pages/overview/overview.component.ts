@@ -13,8 +13,8 @@ import { Study } from '../../shared/store/study/study.model'
       <div start>
         <img class="logo" src="assets/radar-logo.svg" alt="RADAR-CNS Logo">
         <div class="title">
-          <div class="font-body-light">RADAR-CNS</div>
-          <div class="font-title">Mental Health</div>
+          <div class="font-body-light">QUEENSLAND</div>
+          <div class="font-title">Seizure Gauge</div>
         </div>
       </div>
       <div end>
