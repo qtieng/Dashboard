@@ -10,7 +10,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM node:8
+FROM node:8 as builder
 
 MAINTAINER Maximilian Kerz @kerzmaximilian, Amos Folarin @afolarin, Joris Borgdorff @blootsvoets, Herculano Campos @herkulano
 
@@ -43,7 +43,7 @@ ENV PROJ_FOLDER="/opt/${PROJ}"
 COPY ./docker/default.nginx /etc/nginx/conf.d/default.conf
 COPY ./docker/init.sh .
 
-COPY --from=0 ${PROJ_FOLDER}/dist /var/www
+COPY --from=builder ${PROJ_FOLDER}/dist /var/www
 
 # expose internal port:80 and run init.sh
 EXPOSE 80
